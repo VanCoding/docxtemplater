@@ -208,6 +208,7 @@ module.exports = class XmlTemplater {
 	xmlToBeReplaced(options) {
 		var before = "";
 		var after = "";
+		options.insideValue = options.insideValue.split("\r\n").join("</w:t><w:br/><w:t>");
 		if (options.noStartTag) {
 			return [options.insideValue];
 		}
